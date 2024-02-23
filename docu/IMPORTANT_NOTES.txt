@@ -1,0 +1,9 @@
+
+
+Some values of the data structure of the datasheet at page 3 ARE WRONG:
+
+- ph value is properly stored at bytes 4:7
+- THE VALUES OF \x15 and \x16 ARE NOT EXCLUSIVE FOR HEAD AND TAIL!!!
+    - ALSO DATA CAN CONTAIN THOSE VALUES!!!
+        - SCREWING UP ANY METHOD TRYING TO GET A DATA PACKET WITHOUT KNOWING THE SIZE IN ADVANCE; AND IF WE ARE AT THE BEGINNING OF A PACKET!!!
+        - HORRIBLE DESIGN.
